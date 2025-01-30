@@ -1,0 +1,9 @@
+.Logo{
+    background-image: url('../../../public/images/sailor-saturn.png');
+    width: 100%;
+    height: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
