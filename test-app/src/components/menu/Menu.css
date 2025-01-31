@@ -1,0 +1,40 @@
+.Menu-Container{
+    align-items: center
+ 
+}
+.Menu-Container a {
+    text-decoration: none;
+}
+.MenuList{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+.MenuItem{
+    padding: 10px;
+}
+
+.MenuItem:hover{
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .Menu-Container{
+        display: block;
+        background-color: black;
+        color: white;
+        margin: 10px;
+    }
+    .MenuList{
+        display: block;
+    }
+    .MenuItem{
+        padding: 10px 0;
+        text-align: center;
+    }
+    
+}

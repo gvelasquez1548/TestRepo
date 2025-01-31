@@ -1,0 +1,84 @@
+.Footer-Container {
+    display: flex;
+    justify-content: space-around;  
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+}
+
+.Business-Info-Container{
+    justify-content: flex-start;
+}
+.Business-Info-Container h1, h2, p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.5em;
+}
+
+.Footer-Container p {
+    color: #333;
+    font-size: 14px;
+    margin: 0;
+}
+
+.Footer-Container a {
+    color: #666;
+    text-decoration: none;
+}
+
+.Footer-Container a:hover {
+    color: #000;
+}
+
+
+.Contact-Container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.Contact-Container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Contact-Container input[type="text"], input[type="email"], input[type="tel"],
+.Contact-Container textarea {
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #000000;
+    border-radius: 5px;
+}
+
+.Contact-Container button[type="submit"] {
+    width: 150px;
+    padding: 10px;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.Contact-Container button[type="submit"]:hover {
+    background-color: #614a4a;
+}
+
+.insta-icon, .face-icon {
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: 10px 10px 0;    
+    display: inline-block;
+}
+
+.insta-icon{
+    background-image: url('/public/images/instagram.png');
+}
+
+.face-icon{
+    background-image: url('/public/images/facebook.png');
+}
