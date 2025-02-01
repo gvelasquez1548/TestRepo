@@ -7,10 +7,12 @@
 }
 
 .Business-Info-Container{
-    justify-content: flex-start;
+    flex: 1;
+    max-width: 400px;
 }
 .Business-Info-Container h1, h2, p{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
     font-size: 1.5em;
 }
 
@@ -52,23 +54,22 @@
 }
 
 .Contact-Container button {
-    background-color: #4CAF50; /* Green background */
-    color: white; /* White text */
-    border: none; /* Remove default border */
-    padding: 15px 32px; /* Padding for size */
-    text-align: center; /* Centered text */
-    text-decoration: none; /* Remove underline */
-    display: inline-block; /* Inline-block for proper sizing */
-    font-size: 16px; /* Font size */
-    margin: 4px 2px; /* Margin around the button */
-    cursor: pointer; /* Pointer cursor on hover */
-    border-radius: 4px; /* Rounded corners */
-    transition: background-color 0.3s ease; /* Smooth transition */
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
   }
  
-  /* Hover effect */
   .Contact-Container button:hover {
-    background-color: #45a049; /* Darker green on hover */
+    background-color: #45a049;
   }
 
 .insta-icon, .face-icon {

@@ -7,12 +7,12 @@ import "./Auction.css";
 
 const Auction = () => {
     return (
-        <>
-            <Body elements= {<> <Header/><Footer/></>}/>
+        <Body elements={<>
+            <Header />
             <div className="Auction-Container">
                 <div className="auction-content">
                     <div className="auction-carrousel">
-                    <Carrousel />
+                        <Carrousel />
                     </div>
                     <div className="auction-text">
                         <h2><span className="red-text">Online only AUCTION</span></h2>
@@ -22,7 +22,8 @@ const Auction = () => {
                     </div>
                 </div>
             </div>
-        </>
+            <Footer />
+        </>} />
     );
 };
 

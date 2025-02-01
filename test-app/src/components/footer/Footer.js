@@ -1,36 +1,37 @@
 import React from "react";
 import './Footer.css'
 import { useLocation } from "react-router-dom";
- 
+
 const Footer = () => {
     const location = useLocation();
-    const isFormSubmitted = location.search.includes('Name') && location.search.includes('Email') && location.search.includes('Phone') && location.search.includes('Subject');
     const params = new URLSearchParams(location.search);
+    const isFormSubmitted = ["Name", "Email", "Phone", "Subject"].every(param => params.has(param));
 
     var box = null;
-    if (!isFormSubmitted) { 
-        
-        box =(
+    if (!isFormSubmitted) {
+
+        box = (
             <div className="Contact-Container">
                 <form>
-                    <input type="text" id="Name" name="Name" placeholder="Name" required/>
-                    <input type="email" id="Email" name="Email" placeholder="Email" required/>
-                    <input type="tel" id="Phone" name="Phone" placeholder="Phone Number" required/>
-                    <input type="text" id="Subject" name="Subject" placeholder="Subject" required/>
+                    <input type="text" id="Name" name="Name" placeholder="Name" required />
+                    <input type="email" id="Email" name="Email" placeholder="Email" required />
+                    <input type="tel" id="Phone" name="Phone" placeholder="Phone Number" required />
+                    <input type="text" id="Subject" name="Subject" placeholder="Subject" required />
                     <textarea name="Message" id="Message" placeholder="Message"></textarea>
                     <button type="submit">Send</button>
                 </form>
             </div>
         )
-        
-    }else{ console.log(params.get('Name'))
+
+    } else {
+        console.log(params.get('Name'))
         box = (
             <div>
                 <h4>Thank you {params.get('Name')} for your submission</h4>
                 <p><strong>We will back to you as soon as possible! :3</strong></p>
             </div>
         )
-            
+
     }
 
     return (
@@ -57,5 +58,5 @@ const Footer = () => {
         </div>
     )
 }
- 
-export default Footer
+
+export default Footer
