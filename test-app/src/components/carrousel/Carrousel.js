@@ -2,65 +2,62 @@ import React from "react";
 import "./Carrousel.css";
 
 const Carrousel = () => {
-    return(
-        <>
-            <div class="carousel-container">
-                <h2>slider</h2>
-                <div class="carousel my-carousel carousel--translate">
-                    <input class="carousel__activator" type="radio" name="carousel" id="F" checked="checked"/>
-                    <input class="carousel__activator" type="radio" name="carousel" id="G"/>
-                    <input class="carousel__activator" type="radio" name="carousel" id="H"/>
-                    <input class="carousel__activator" type="radio" name="carousel" id="I"/>
-                    <input class="carousel__activator" type="radio" name="carousel" id="J"/>
-                    <div class="carousel__controls">
-                    <label class="carousel__control carousel__control--backward" for="J"></label>
-                    <label class="carousel__control carousel__control--forward" for="G"></label>
-                    </div>
-                    <div class="carousel__controls">
-                    <label class="carousel__control carousel__control--backward" for="F"></label>
-                    <label class="carousel__control carousel__control--forward" for="H"></label>
-                    </div>
-                    <div class="carousel__controls">
-                    <label class="carousel__control carousel__control--backward" for="G"></label>
-                    <label class="carousel__control carousel__control--forward" for="I"></label>
-                    </div>
-                    <div class="carousel__controls">
-                    <label class="carousel__control carousel__control--backward" for="H"></label>
-                    <label class="carousel__control carousel__control--forward" for="J"></label>
-                    </div>
-                    <div class="carousel__controls">
-                    <label class="carousel__control carousel__control--backward" for="I"></label>
-                    <label class="carousel__control carousel__control--forward" for="F"></label>
-                    </div>
-                    <div class="carousel__track">
-                    <li class="carousel__slide">
-                        <h1>F</h1>
-                    </li>
-                    <li class="carousel__slide">
-                        <h1>G</h1>
-                    </li>
-                    <li class="carousel__slide">
-                        <h1>H</h1>
-                    </li>
-                    <li class="carousel__slide">
-                        <h1>I</h1>
-                    </li>
-                    <li class="carousel__slide">
-                        <h1>J</h1>
-                    </li>
-                    </div>
-                    <div class="carousel__indicators">
-                    <label class="carousel__indicator" for="F"></label>
-                    <label class="carousel__indicator" for="G"></label>
-                    <label class="carousel__indicator" for="H"></label>
-                    <label class="carousel__indicator" for="I"></label>
-                    <label class="carousel__indicator" for="J"></label>
-                    </div>
+    return (
+        <div className="carousel-container">
+            <div className="carousel">
+                <input className="carousel__activator" type="radio" name="carousel" id="slide1" defaultChecked />
+                <input className="carousel__activator" type="radio" name="carousel" id="slide2" />
+                <input className="carousel__activator" type="radio" name="carousel" id="slide3" />
+                <input className="carousel__activator" type="radio" name="carousel" id="slide4" />
+                <input className="carousel__activator" type="radio" name="carousel" id="slide5" />
+
+                <label className="carousel__arrow carousel__arrow--left" htmlFor="slide5">
+                    &#10094;
+                </label>
+
+                <label className="carousel__arrow carousel__arrow--right" htmlFor="slide2">
+                    &#10095;
+                </label>
+
+                <div className="carousel__controls">
+                    <label className="carousel__control carousel__control--backward" htmlFor="slide5"></label>
+                    <label className="carousel__control carousel__control--forward" htmlFor="slide2"></label>
+                </div>
+                <div className="carousel__controls">
+                    <label className="carousel__control carousel__control--backward" htmlFor="slide1"></label>
+                    <label className="carousel__control carousel__control--forward" htmlFor="slide3"></label>
+                </div>
+                <div className="carousel__controls">
+                    <label className="carousel__control carousel__control--backward" htmlFor="slide2"></label>
+                    <label className="carousel__control carousel__control--forward" htmlFor="slide4"></label>
+                </div>
+                <div className="carousel__controls">
+                    <label className="carousel__control carousel__control--backward" htmlFor="slide3"></label>
+                    <label className="carousel__control carousel__control--forward" htmlFor="slide5"></label>
+                </div>
+                <div className="carousel__controls">
+                    <label className="carousel__control carousel__control--backward" htmlFor="slide4"></label>
+                    <label className="carousel__control carousel__control--forward" htmlFor="slide1"></label>
+                </div>
+
+                <div className="carousel__track">
+                    <div className="carousel__slide" style={{ backgroundImage: "url(https://unsplash.it/300?random)" }}></div>
+                    <div className="carousel__slide" style={{ backgroundImage: "url(https://unsplash.it/600?random)" }}></div>
+                    <div className="carousel__slide" style={{ backgroundImage: "url(https://unsplash.it/900?random)" }}></div>
+                    <div className="carousel__slide" style={{ backgroundImage: "url(https://unsplash.it/1200?random)" }}></div>
+                    <div className="carousel__slide" style={{ backgroundImage: "url(https://unsplash.it/1500?random)" }}></div>
+                </div>
+
+                <div className="carousel__indicators">
+                    <label className="carousel__indicator" htmlFor="slide1"></label>
+                    <label className="carousel__indicator" htmlFor="slide2"></label>
+                    <label className="carousel__indicator" htmlFor="slide3"></label>
+                    <label className="carousel__indicator" htmlFor="slide4"></label>
+                    <label className="carousel__indicator" htmlFor="slide5"></label>
                 </div>
             </div>
-        </>
-    )
-}
-
+        </div>
+    );
+};
 
 export default Carrousel;

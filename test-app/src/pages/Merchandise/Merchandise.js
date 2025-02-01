@@ -1,12 +1,13 @@
 import React from "react";
 import Header from "../../components/header/Header.js";
+import Body from "../../components/body/Body.js";
 import Footer from "../../components/footer/Footer.js";
 import "./Merchandise.css";
 
 const Merchandise = () => {
     return(
         <>
-        <Header/>
+        <Body elements= {<> <Header/><Footer/></>}/>
         <div className="Merchandise-Container">
             <h1><strong>MERCHANDISE</strong></h1>
             <div className="Merchandise-Content">
@@ -24,7 +25,6 @@ const Merchandise = () => {
                 </div>
             </div>
         </div>
-        <Footer/>
         </>
     );
 }
