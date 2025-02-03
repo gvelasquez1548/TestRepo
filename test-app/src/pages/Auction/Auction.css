@@ -13,18 +13,18 @@
 
 .auction-content {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 20px;
     align-items: flex-start;
 }
-
 .auction-content .auction-carrousel {
     flex: 1 1 50%;
-    max-width: 600px; 
+    max-width: 50%;
+    margin-right: 10px; /* Reduce el margen derecho para acercarlo al div de auction-text */
 }
 
 .auction-text {
-    flex: 1 1 45%; 
+    flex: 1 1 50%;
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 10px;
@@ -47,7 +47,6 @@
     color: #555;
 }
 
-/* Estilos responsivos */
 @media (max-width: 768px) {
     .auction-content {
         flex-direction: column;
@@ -55,7 +54,7 @@
 
     .auction-content .auction-carrousel,
     .auction-text {
-        flex: 1 1 100%; /* Ocupa todo el ancho en dispositivos móviles */
+        flex: 1 1 100%;
         max-width: 100%;
     }
 
