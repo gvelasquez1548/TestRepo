@@ -3,60 +3,69 @@ import "./Carrousel.css";
 
 const Carrousel = () => {
     return (
-        <div className="carousel-container">
-            <div className="carousel">
-                <input className="carousel__activator" type="radio" name="carousel" id="slide1" defaultChecked />
-                <input className="carousel__activator" type="radio" name="carousel" id="slide2" />
-                <input className="carousel__activator" type="radio" name="carousel" id="slide3" />
-                <input className="carousel__activator" type="radio" name="carousel" id="slide4" />
-                <input className="carousel__activator" type="radio" name="carousel" id="slide5" />
-
-                <label className="carousel__arrow carousel__arrow--left" htmlFor="slide5">
-                    &#10094;
-                </label>
-
-                <label className="carousel__arrow carousel__arrow--right" htmlFor="slide2">
-                    &#10095;
-                </label>
-
-                <div className="carousel__controls">
-                    <label className="carousel__control carousel__control--backward" htmlFor="slide5"></label>
-                    <label className="carousel__control carousel__control--forward" htmlFor="slide2"></label>
-                </div>
-                <div className="carousel__controls">
-                    <label className="carousel__control carousel__control--backward" htmlFor="slide1"></label>
-                    <label className="carousel__control carousel__control--forward" htmlFor="slide3"></label>
-                </div>
-                <div className="carousel__controls">
-                    <label className="carousel__control carousel__control--backward" htmlFor="slide2"></label>
-                    <label className="carousel__control carousel__control--forward" htmlFor="slide4"></label>
-                </div>
-                <div className="carousel__controls">
-                    <label className="carousel__control carousel__control--backward" htmlFor="slide3"></label>
-                    <label className="carousel__control carousel__control--forward" htmlFor="slide5"></label>
-                </div>
-                <div className="carousel__controls">
-                    <label className="carousel__control carousel__control--backward" htmlFor="slide4"></label>
-                    <label className="carousel__control carousel__control--forward" htmlFor="slide1"></label>
-                </div>
-
-                <div className="carousel__track">
-                    <div className="carousel__slide" style={{ backgroundImage: "url(https://unsplash.it/300?random)" }}></div>
-                    <div className="carousel__slide" style={{ backgroundImage: "url(https://unsplash.it/600?random)" }}></div>
-                    <div className="carousel__slide" style={{ backgroundImage: "url(https://unsplash.it/900?random)" }}></div>
-                    <div className="carousel__slide" style={{ backgroundImage: "url(https://unsplash.it/1200?random)" }}></div>
-                    <div className="carousel__slide" style={{ backgroundImage: "url(https://unsplash.it/1500?random)" }}></div>
-                </div>
-
-                <div className="carousel__indicators">
-                    <label className="carousel__indicator" htmlFor="slide1"></label>
-                    <label className="carousel__indicator" htmlFor="slide2"></label>
-                    <label className="carousel__indicator" htmlFor="slide3"></label>
-                    <label className="carousel__indicator" htmlFor="slide4"></label>
-                    <label className="carousel__indicator" htmlFor="slide5"></label>
-                </div>
-            </div>
-        </div>
+        <>
+            <section class="carousel" aria-label="Gallery">
+                <ol class="carousel__viewport">
+                    <li id="carousel__slide1"
+                        tabindex="0"
+                        class="carousel__slide">
+                        <div class="carousel__snapper">
+                            <a href="#carousel__slide4"
+                                class="carousel__prev">Go to last slide</a>
+                            <a href="#carousel__slide2"
+                                class="carousel__next">Go to next slide</a>
+                        </div>
+                    </li>
+                    <li id="carousel__slide2"
+                        tabindex="0"
+                        class="carousel__slide">
+                        <div class="carousel__snapper"></div>
+                        <a href="#carousel__slide1"
+                            class="carousel__prev">Go to previous slide</a>
+                        <a href="#carousel__slide3"
+                            class="carousel__next">Go to next slide</a>
+                    </li>
+                    <li id="carousel__slide3"
+                        tabindex="0"
+                        class="carousel__slide">
+                        <div class="carousel__snapper"></div>
+                        <a href="#carousel__slide2"
+                            class="carousel__prev">Go to previous slide</a>
+                        <a href="#carousel__slide4"
+                            class="carousel__next">Go to next slide</a>
+                    </li>
+                    <li id="carousel__slide4"
+                        tabindex="0"
+                        class="carousel__slide">
+                        <div class="carousel__snapper"></div>
+                        <a href="#carousel__slide3"
+                            class="carousel__prev">Go to previous slide</a>
+                        <a href="#carousel__slide1"
+                            class="carousel__next">Go to first slide</a>
+                    </li>
+                </ol>
+                <aside class="carousel__navigation">
+                    <ol class="carousel__navigation-list">
+                        <li class="carousel__navigation-item">
+                            <a href="#carousel__slide1"
+                                class="carousel__navigation-button">Go to slide 1</a>
+                        </li>
+                        <li class="carousel__navigation-item">
+                            <a href="#carousel__slide2"
+                                class="carousel__navigation-button">Go to slide 2</a>
+                        </li>
+                        <li class="carousel__navigation-item">
+                            <a href="#carousel__slide3"
+                                class="carousel__navigation-button">Go to slide 3</a>
+                        </li>
+                        <li class="carousel__navigation-item">
+                            <a href="#carousel__slide4"
+                                class="carousel__navigation-button">Go to slide 4</a>
+                        </li>
+                    </ol>
+                </aside>
+            </section>
+        </>
     );
 };
 

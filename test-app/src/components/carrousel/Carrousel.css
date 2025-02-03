@@ -1,104 +1,222 @@
-.carousel-container {
-  text-align: center;
-  width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+@keyframes tonext {
+  75% {
+    left: 0;
+  }
+  95% {
+    left: 100%;
+  }
+  98% {
+    left: 100%;
+  }
+  99% {
+    left: 0;
+  }
+}
+
+@keyframes tostart {
+  75% {
+    left: 0;
+  }
+  95% {
+    left: -300%;
+  }
+  98% {
+    left: -300%;
+  }
+  99% {
+    left: 0;
+  }
+}
+
+@keyframes snap {
+  96% {
+    scroll-snap-align: center;
+  }
+  97% {
+    scroll-snap-align: none;
+  }
+  99% {
+    scroll-snap-align: none;
+  }
+  100% {
+    scroll-snap-align: center;
+  }
+}
+
+
+* {
+  box-sizing: border-box;
+  scrollbar-color: transparent transparent; /* thumb and track color */
+  scrollbar-width: 0px;
+}
+
+*::-webkit-scrollbar {
+  width: 0;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: transparent;
+  border: none;
+}
+
+* {
+  -ms-overflow-style: none;
+}
+
+ol, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .carousel {
   position: relative;
-  width: 100%;
-  max-width: 100%; /* Ocupa todo el ancho del contenedor */
-  margin: 0 auto;
-  overflow: hidden;
-  aspect-ratio: 16 / 9; /* Mantiene la proporción del carrusel (16:9) */
+  padding-top: 75%;
+  filter: drop-shadow(0 0 10px #0003);
+  perspective: 100px;
 }
 
-.carousel__activator {
-  display: none;
-}
-
-.carousel__track {
+.carousel__viewport {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   display: flex;
-  transition: transform 0.5s ease;
-  width: 500%; /* 100% por cada slide */
+  overflow-x: scroll;
+  counter-reset: item;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
 }
 
 .carousel__slide {
-  flex: 1 0 100%;
-  height: 100%; /* Ocupa toda la altura del carrusel */
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 2rem;
+  position: relative;
+  flex: 0 0 100%;
+  width: 100%;
+  background-color: #f99;
+  counter-increment: item;
 }
 
-/* Flechas de navegación */
-.carousel__arrow {
+.carousel__slide:nth-child(even) {
+  background-color: #99f;
+}
+
+.carousel__slide:before {
+  content: counter(item);
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  font-size: 2rem;
-  z-index: 2;
+  left: 50%;
+  transform: translate3d(-50%,-40%,70px);
+  color: #fff;
+  font-size: 2em;
 }
 
-.carousel__arrow:hover {
-  background: rgba(0, 0, 0, 0.8);
-}
-
-.carousel__arrow--left {
-  left: 10px;
-}
-
-.carousel__arrow--right {
-  right: 10px;
-}
-
-/* Indicadores (puntos de navegación) */
-.carousel__indicators {
+.carousel__snapper {
   position: absolute;
-  bottom: 10px;
+  top: 0;
+  left: 0;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 5px;
+  height: 100%;
+  scroll-snap-align: center;
 }
 
-.carousel__indicator {
-  width: 10px;
-  height: 10px;
-  background: rgba(255, 255, 255, 0.5);
+@media (hover: hover) {
+  .carousel__snapper {
+    animation-name: tonext, snap;
+    animation-timing-function: ease;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+
+  .carousel__slide:last-child .carousel__snapper {
+    animation-name: tostart, snap;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel__snapper {
+    animation-name: none;
+  }
+}
+
+.carousel:hover .carousel__snapper,
+.carousel:focus-within .carousel__snapper {
+  animation-name: none;
+}
+
+.carousel__navigation {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+
+.carousel__navigation-list,
+.carousel__navigation-item {
+  display: inline-block;
+}
+
+.carousel__navigation-button {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #333;
+  background-clip: content-box;
+  border: 0.25rem solid transparent;
   border-radius: 50%;
-  cursor: pointer;
+  font-size: 0;
+  transition: transform 0.1s;
 }
 
-.carousel__indicator:hover {
-  background: rgba(255, 255, 255, 1);
+.carousel::before,
+.carousel::after,
+.carousel__prev,
+.carousel__next {
+  position: absolute;
+  top: 0;
+  margin-top: 37.5%;
+  width: 4rem;
+  height: 4rem;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  font-size: 0;
+  outline: 0;
 }
 
-/* Lógica para cambiar slides */
-#slide1:checked ~ .carousel__track {
-  transform: translateX(0%);
+.carousel::before,
+.carousel__prev {
+  left: -1rem;
 }
 
-#slide2:checked ~ .carousel__track {
-  transform: translateX(-100%);
+.carousel::after,
+.carousel__next {
+  right: -1rem;
 }
 
-#slide3:checked ~ .carousel__track {
-  transform: translateX(-200%);
+.carousel::before,
+.carousel::after {
+  content: '';
+  z-index: 1;
+  background-color: #333;
+  background-size: 1.5rem 1.5rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: #fff;
+  font-size: 2.5rem;
+  line-height: 4rem;
+  text-align: center;
+  pointer-events: none;
 }
 
-#slide4:checked ~ .carousel__track {
-  transform: translateX(-300%);
+.carousel::before {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,50 80,100 80,0' fill='%23fff'/%3E%3C/svg%3E");
 }
 
-#slide5:checked ~ .carousel__track {
-  transform: translateX(-400%);
+.carousel::after {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E");
 }
