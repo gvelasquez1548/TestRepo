@@ -3,11 +3,11 @@ import "./Menu.css";
 
 const Menu = () => {
     return(
-        <div className="Menu-Container">
-            <ul className="MenuList">
-                <li className="MenuItem"><a href="/">Home</a></li>
-                <li className="MenuItem"><a href="/Merchandise">Merchandise</a></li>
-                <li className="MenuItem"><a href="/Auction">Auction</a></li>
+        <div className="menu-Container">
+            <ul className="menu-List">
+                <li className="menu-Item"><a href="/">Home</a></li>
+                <li className="menu-Item"><a href="/Merchandise">Merchandise</a></li>
+                <li className="menu-Item"><a href="/Auction">Auction</a></li>
             </ul>
         </div>
     )

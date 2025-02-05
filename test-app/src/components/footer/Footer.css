@@ -1,4 +1,4 @@
-.Footer-Container {
+.footer-Container {
     display: flex;
     justify-content: space-around;  
     background-color: #f2f2f2;
@@ -6,46 +6,46 @@
     text-align: center;
 }
 
-.Business-Info-Container{
+.business_InfoContainer{
     flex: 1;
     max-width: 400px;
 }
-.Business-Info-Container h1, h2, p{
+.business_InfoContainer h1, h2, p{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
     font-size: 1.5em;
 }
 
-.Footer-Container p {
+.footer-Container p {
     color: #333;
     font-size: 14px;
     margin: 0;
 }
 
-.Footer-Container a {
+.footer-Container a {
     color: #666;
     text-decoration: none;
 }
 
-.Footer-Container a:hover {
+.footer-Container a:hover {
     color: #000;
 }
 
 
-.Contact-Container {
+.contact-Container {
     margin-top: 20px;
     display: flex;
     justify-content: center;
 }
 
-.Contact-Container form {
+.contact-Container form {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.Contact-Container input[type="text"], input[type="email"], input[type="tel"],
-.Contact-Container textarea {
+.contact-Container input[type="text"], input[type="email"], input[type="tel"],
+.contact-Container textarea {
     width: 300px;
     padding: 10px;
     margin-bottom: 10px;
@@ -53,7 +53,7 @@
     border-radius: 5px;
 }
 
-.Contact-Container button {
+.contact-Container button {
     background-color: #4CAF50;
     color: white;
     border: none;
@@ -68,11 +68,11 @@
     transition: background-color 0.3s ease;
   }
  
-  .Contact-Container button:hover {
+  .contact-Container button:hover {
     background-color: #45a049;
   }
 
-.insta-icon, .face-icon {
+.insta-Icon, .face-Icon {
     width: 50px;
     height: 50px;
     background-repeat: no-repeat;
@@ -82,10 +82,10 @@
     display: inline-block;
 }
 
-.insta-icon{
+.insta-Icon{
     background-image: url('/public/images/instagram.png');
 }
 
-.face-icon{
+.face-Icon{
     background-image: url('/public/images/facebook.png');
 }

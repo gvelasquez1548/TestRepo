@@ -1,62 +1,62 @@
-.auction-Container {
+.improvement-Container {
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.auction-Container h1 {
-    text-align: center;
-    font-size: 2.5rem;
+.improvement-Container h2 {
+    text-align: left;
+    font-size: 2.0rem;
     margin-bottom: 20px;
     color: #333;
 }
 
-.auction-Content {
+.improvement-Content {
     display: flex;
     flex-wrap: nowrap;
-    gap: 20px;
+    gap: 50px;
     align-items: flex-start;
 }
-.auction-Content .auction-Carrousel {
+.improvement-Content .improvement-Carrousel {
     flex: 1 1 50%;
-    max-width: 50%;
-    margin-right: 10px; 
+    max-width: 75%;
+    margin-right: 10px;
 }
 
-.auction-Text {
+.improvement-Text {
     flex: 1 1 50%;
     padding: 20px;
     border-radius: 10px;
 }
 
-.auction-Text h2 {
+.improvement-Text h2 {
     font-size: 2rem;
     margin-bottom: 15px;
     color: #333;
 }
 
-.auction-Text .red-Text {
+.improvement-Text .red-Text {
     color: #ff0000;
 }
 
-.auction-Text p {
+.improvement-Text p {
     font-size: 1rem;
     line-height: 1.6;
     color: #555;
 }
 
 @media (max-width: 768px) {
-    .auction-Content {
+    .improvement-Content {
         flex-direction: column;
     }
 
-    .auction-Content .auction-Carrousel,
-    .auction-Text {
+    .improvement-Content .improvement-Carrousel,
+    .improvement-Text {
         flex: 1 1 100%;
         max-width: 100%;
     }
 
-    .auction-Text {
+    .improvement-Text {
         margin-top: 20px;
     }
 }

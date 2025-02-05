@@ -5,18 +5,17 @@
  
     background-size: contain;
     background-position: left;
-    min-width: 200px;
-    min-height: 100px;
+    min-width: 350px;
+    min-height: 175px;
     background-repeat: no-repeat;
 }
  
- 
-.Header-Container{
+.header-Container{
  display: flex;
  justify-content: space-around;
 }
 @media (max-width: 768px) {
-    .Header-Container{
+    .header-Container{
         display: block;
     }
     .Logo{

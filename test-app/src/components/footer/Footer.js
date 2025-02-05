@@ -11,7 +11,7 @@ const Footer = () => {
     if (!isFormSubmitted) {
 
         box = (
-            <div className="Contact-Container">
+            <div className="contact-Container">
                 <form>
                     <input type="text" id="Name" name="Name" placeholder="Name" required />
                     <input type="email" id="Email" name="Email" placeholder="Email" required />
@@ -35,8 +35,8 @@ const Footer = () => {
     }
 
     return (
-        <div className='Footer-Container'>
-            <div className="Business-Info-Container">
+        <div className='footer-Container'>
+            <div className="business_InfoContainer">
                 <h1>Contact</h1>
                 <h2>Address</h2>
                 <p><strong>17229 Lemon St</strong></p>
@@ -48,10 +48,10 @@ const Footer = () => {
                 <p><strong>Mon-Fri: 8am-4pm</strong></p>
                 <p><strong>Weekend: Closed</strong></p>
                 <a href="http://www.instagram.com/ELITE_SURPLUS_D/">
-                    <div className="insta-icon"></div>
+                    <div className="insta-Icon"></div>
                 </a>
                 <a href="https://www.facebook.com/EliteSurplusDistributors/">
-                    <div className="face-icon"></div>
+                    <div className="face-Icon"></div>
                 </a>
             </div>
             {box}

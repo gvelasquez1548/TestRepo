@@ -1,14 +1,7 @@
 import React, { useState } from "react";
 import "./Carrousel.css";
 
-const images = [
-    "/images/tools.png",
-    "/images/sailor-saturn.png",
-    "/images/pallets.png",
-    "/images/auction.png"
-];
-
-const Carrousel = () => {
+const Carrousel = ({images}) => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const goToPrevious = () => {

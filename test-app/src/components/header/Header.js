@@ -4,7 +4,7 @@ import Menu from '../menu/Menu.js';
 
 const Header = () => {
     return (
-        <div className= 'Header-Container'>
+        <div className= 'header-Container'>
             <div className="Logo"/>
             <Menu/>
         </div>

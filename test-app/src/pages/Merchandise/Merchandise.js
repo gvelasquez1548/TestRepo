@@ -8,20 +8,20 @@ const Merchandise = () => {
     return (
         <Body elements={<>
             <Header />
-            <div className="Merchandise-Container">
+            <div className="merchandise-Container">
                 <h1><strong>MERCHANDISE</strong></h1>
-                <div className="Merchandise-Content">
-                    <div className="MerchCard">
-                        <div className="MerchCard-Tool"></div>
-                        <h3><a href="...">HOME IMPROVEMENT ITEMS AND TOOLS</a></h3>
+                <div className="merchandise-Content">
+                    <div className="merch-Card">
+                        <a href="/Home-Improvement"><div className="merchCard-Tool"></div></a>
+                        <h3><a href="/Home-Improvement">HOME IMPROVEMENT ITEMS AND TOOLS</a></h3>
                     </div>
-                    <div className="MerchCard">
-                        <div className="MerchCard-Auction"></div>
-                        <h3><a href="...">ONLINE AUCTIONS</a></h3>
+                    <div className="merch-Card">
+                        <a href="/Auction"><div className="merchCard-Auction"></div></a>
+                        <h3><a href="/Auction">ONLINE AUCTIONS</a></h3>
                     </div>
-                    <div className="MerchCard">
-                        <div className="MerchCard-Pallets"></div>
-                        <h3><a href="...">HOME IMPROVEMENT PALLETS</a></h3>
+                    <div className="merch-Card">
+                        <a href="/Pallets"><div className="merchCard-Pallets"></div></a>
+                        <h3><a href="/Pallets">HOME IMPROVEMENT PALLETS</a></h3>
                     </div>
                 </div>
             </div>

@@ -1,21 +1,22 @@
-.Menu-Container{
-    align-items: center
- 
+.menu-Container{
+    align-items: center;
 }
-.Menu-Container a {
+.menu-Container a {
     text-decoration: none;
+    font-size: 1.5rem;
 }
-.MenuList{
+.menu-List{
     display: flex;
     justify-content: space-between;
     align-items: center;
     list-style: none;
 }
-.MenuItem{
+.menu-Item{
     padding: 10px;
+    margin: 10% 10px;
 }
 
-.MenuItem:hover{
+.menu-Item:hover{
     background-color: #f1f1f1;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -23,18 +24,19 @@
 }
 
 @media (max-width: 768px) {
-    .Menu-Container{
+    .menu-Container{
         display: block;
-        background-color: black;
-        color: white;
         margin: 10px;
     }
-    .MenuList{
+    .menu-List{
         display: block;
+        color: white;
     }
-    .MenuItem{
+    .menu-Item{
         padding: 10px 0;
         text-align: center;
+        color: white;
+        margin: 10px 0; 
     }
     
 }
