@@ -1,7 +1,6 @@
 .footer-Container {
     display: flex;
-    justify-content: space-around;  
-    background-color: #f2f2f2;
+    justify-content: space-around; 
     padding: 20px;
     text-align: center;
 }
@@ -88,4 +87,22 @@
 
 .face-Icon{
     background-image: url('/public/images/facebook.png');
+}
+
+
+@media screen and (max-width: 768px){
+    .footer-Container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .business_InfoContainer{
+        margin-bottom: 20px;
+    }
+
+    .contact-Container input[type="text"], input[type="email"], input[type="tel"],
+    .contact-Container textarea {
+        width: 100%;
+    }
+    
 }

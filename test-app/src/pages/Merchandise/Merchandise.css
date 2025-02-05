@@ -54,3 +54,16 @@ a {
     text-decoration: none;
     color: black;
 }
+
+@media screen and (max-width: 768px) {
+    h1 {
+        text-align: center;
+        margin: 20px;
+        font-size: 2.5rem;
+    }
+    .merchCard-Tool, .merchCard-Auction, .merchCard-Pallets {
+        width: 200px;
+        height: 200px;
+    }
+    
+}
