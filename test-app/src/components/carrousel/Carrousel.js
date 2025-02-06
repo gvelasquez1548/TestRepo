@@ -27,4 +27,4 @@ const Carrousel = ({images}) => {
     );
 };
 
-export default Carrousel;
+export default Carrousel; 
