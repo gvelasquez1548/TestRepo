@@ -18,11 +18,11 @@ const Carrousel = ({images}) => {
 
     return (
         <div className="carousel">
-            <button onClick={goToPrevious} className="carousel__button carousel__button--left">‹</button>
-            <div className="carousel__image-container">
-                <img src={images[currentIndex]} alt={`Slide ${currentIndex + 1}`} className="carousel__image" />
+            <button onClick={goToPrevious} className="carousel__Button carousel__Button--left">‹</button>
+            <div className="carousel__Image-container">
+                <img src={images[currentIndex]} alt={`Slide ${currentIndex + 1}`} className="carousel__Image" />
             </div>
-            <button onClick={goToNext} className="carousel__button carousel__button--right">›</button>
+            <button onClick={goToNext} className="carousel__Button carousel__Button--right">›</button>
         </div>
     );
 };

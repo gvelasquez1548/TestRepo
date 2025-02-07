@@ -8,7 +8,7 @@
   overflow: hidden;
 }
 
-.carousel__image-container {
+.carousel__Image-container {
   width: 100%;
   height: 100%;
   display: flex;
@@ -16,13 +16,13 @@
   align-items: center;
 }
 
-.carousel__image {
+.carousel__Image {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.carousel__button {
+.carousel__Button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -34,10 +34,10 @@
   z-index: 1;
 }
 
-.carousel__button--left {
+.carousel__Button--left {
   left: 10px;
 }
 
-.carousel__button--right {
+.carousel__Button--right {
   right: 10px;
 }
