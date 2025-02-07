@@ -5,7 +5,7 @@ import Menu from '../menu/Menu.js';
 const Header = () => {
     return (
         <div className= 'header-Container'>
-            <div className="Logo"/>
+            <a href="/"><div className="Logo"/></a>
             <Menu/>
         </div>
     )
