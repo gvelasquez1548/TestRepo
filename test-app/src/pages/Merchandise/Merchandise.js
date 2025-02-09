@@ -4,6 +4,24 @@ import Body from "../../components/body/Body.js";
 import Footer from "../../components/footer/Footer.js";
 import "./Merchandise.css";
 
+const merch = [
+    {
+        title: "Home Improvement Items and Tools",
+        img: "",
+        href: "/Home-Improvement"
+    },
+    {
+        title: "Online Auctions",
+        img: "",
+        href: "/Auction"
+    },
+    {
+        title: "palettes",
+        img: "",
+        href: "/Pallets"
+    }
+]
+
 const Merchandise = () => {
     return (
         <Body elements={<>
