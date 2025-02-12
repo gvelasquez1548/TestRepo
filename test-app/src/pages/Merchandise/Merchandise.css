@@ -40,6 +40,10 @@ h1 {
     transform: scale(1.1);
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
 /*
 .merchCard-Tool {
     background-image: url('/public/images/tools.png');
@@ -54,10 +58,7 @@ h1 {
 }
 */
 
-a {
-    text-decoration: none;
-    color: black;
-}
+
 
 @media screen and (max-width: 768px) {
     h1 {
